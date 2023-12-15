@@ -3,7 +3,7 @@
  * @export
  * @interface TimelineAction
  */
-export interface TimelineAction {
+export interface TimelineAction<T = any> {
   /** 动作id */
   id: string;
   /** 动作开始时间 */
@@ -26,6 +26,9 @@ export interface TimelineAction {
   minStart?: number;
   /** 动作最大结束时间限制 */
   maxEnd?: number;
+
+  /** 自定义数据类型 */
+  extend?:T;
 }
 
 /**
